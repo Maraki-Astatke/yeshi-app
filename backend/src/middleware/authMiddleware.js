@@ -25,3 +25,6 @@ export function adminOnly(req, res, next) {
 
   next();
 }
+
+// Alias for protect to match the import name in routes
+export const authenticateToken = protect;
