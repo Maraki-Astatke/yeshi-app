@@ -157,7 +157,7 @@ function AddProduct() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Price (USD) *
+                    Price (brr) *
                   </label>
                   <input
                     type="number"
