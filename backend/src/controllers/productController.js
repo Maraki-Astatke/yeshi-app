@@ -17,7 +17,7 @@ export async function getApprovedProducts(req, res) {
   }
 }
 
-// Get pending products (for admin only)
+
 export async function getPendingProducts(req, res) {
   try {
     // Check if user is admin

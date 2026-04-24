@@ -25,8 +25,8 @@ function Marketplace() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        // const res = await fetch("http://localhost:5001/api/products");
-        const res = await fetch("https://yeshi-app-backend.vercel.app/api/products");
+        const res = await fetch("http://localhost:5001/api/products");
+       
         const data = await res.json();
         setProducts(data.products || []);
       } catch (error) {
@@ -133,7 +133,7 @@ function Marketplace() {
                     onError={(e) => e.target.src = "https://via.placeholder.com/400x300?text=No+Image"}
                   />
                   <div className="absolute top-3 right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-                    ${product.price}
+                    {product.price}
                   </div>
                   <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full text-sm text-white">
                     📍 {product.country || "Ethiopia"}

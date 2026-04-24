@@ -23,8 +23,8 @@ function AdminProducts() {
 
   async function fetchPendingProducts() {
     try {
-      // const response = await fetch("http://localhost:5001/api/products/pending", {
-        const response = await fetch("https://yeshi-app-backend.vercel.app/api/products/pending", {
+      const response = await fetch("http://localhost:5001/api/products/pending", {
+   
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -38,8 +38,8 @@ function AdminProducts() {
 
   async function handleApprove(productId) {
     try {
-      // const response = await fetch(`http://localhost:5001/api/products/${productId}/approve`, {
-        const response = await fetch(`https://yeshi-app-backend.vercel.app/api/products/${productId}/approve`, {
+      const response = await fetch(`http://localhost:5001/api/products/${productId}/approve`, {
+    
         method: "PUT",
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -58,8 +58,8 @@ function AdminProducts() {
     if (!confirm("Are you sure you want to reject this product?")) return;
     
     try {
-      // const response = await fetch(`http://localhost:5001/api/products/${productId}/reject`, {
-        const response = await fetch(`https://yeshi-app-backend.vercel.app/api/products/${productId}/reject`, {
+      const response = await fetch(`http://localhost:5001/api/products/${productId}/reject`, {
+      
         method: "DELETE",
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -148,7 +148,7 @@ function AdminProducts() {
                         <p className="text-sm text-gray-500 mt-1">📍 {product.country || "Ethiopia"}</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-2xl font-bold text-emerald-600">${product.price}</p>
+                        <p className="text-2xl font-bold text-emerald-600">{product.price}</p>
                       </div>
                     </div>
                     
